@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Керування рахунками клієнтів</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Керування рахунками клієнтів</h1>
+
+        <div class="form-container">
+            <form id="accountForm">
+                <input type="text" id="clientName" placeholder="Ім'я клієнта" required>
+                <input type="text" id="clientID" placeholder="Ідентифікаційний номер" required>
+                <input type="number" id="initialBalance" placeholder="Початковий баланс" required>
+                <button type="submit">Створити рахунок</button>
+            </form>
+        </div>
+
+        <div class="form-container">
+            <h2>Операції над рахунком</h2>
+            <form id="transactionForm">
+                <input type="text" id="transactionClientID" placeholder="Ідентифікаційний номер" required>
+                <input type="number" id="transactionAmount" placeholder="Сума" required>
+                <select id="transactionType">
+                    <option value="deposit">Поповнити</option>
+                    <option value="withdraw">Зняти</option>
+                    <option value="transfer">Перевести</option>
+                </select>
+                <button type="submit">Виконати операцію</button>
+            </form>
+        </div>
+
+        <div class="form-container">
+            <h2>Перегляд балансу</h2>
+            <input type="text" id="balanceClientID" placeholder="Ідентифікаційний номер" required>
+            <button id="viewBalanceButton">Переглянути баланс</button>
+            <p id="balanceResult"></p>
+        </div>
+
+        <div class="form-container">
+            <h2>Історія транзакцій</h2>
+            <input type="text" id="historyClientID" placeholder="Ідентифікаційний номер" required>
+            <button id="viewHistoryButton">Переглянути історію</button>
+            <ul id="historyResult"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
